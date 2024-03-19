@@ -6,6 +6,7 @@
     --color-dark4: #1c1c1c;
     --color-dark5: #343434;
     --color-cream: #eff1e0;
+    --color-cream2: #babbb2;
 }
 
 * {
@@ -93,52 +94,80 @@ body {
     text-align: center;
     height: 100vh;
     transition: 1s;
-    background-color: var(--color-dark2); /* Adiciona um fundo igual ao fundo do body */
+    background-color: var(--color-dark2);
+    /* Adiciona um fundo igual ao fundo do body */
 }
 
 .content input[type="text"],
 .content input[type="email"],
 .content textarea {
-    background-color: var(--color-dark3); /* Define uma cor de fundo para os inputs */
-    color: var(--color-white); /* Define a cor do texto nos inputs */
-    border: 1px solid var(--color-white); /* Adiciona uma borda branca aos inputs */
-    border-radius: 5px; /* Adiciona um pequeno arredondamento às bordas dos inputs */
-    padding: 10px; /* Adiciona um espaço interno aos inputs */
-    margin-bottom: 15px; /* Adiciona espaço entre os inputs */
-    width: 100%; /* Faz os inputs ocuparem toda a largura disponível */
-    box-sizing: border-box; /* Faz com que o padding não aumente o tamanho total dos inputs */
+    background-color: var(--color-dark3);
+    /* Define uma cor de fundo para os inputs */
+    color: var(--color-white);
+    /* Define a cor do texto nos inputs */
+    border: 1px solid var(--color-white);
+    /* Adiciona uma borda branca aos inputs */
+    border-radius: 5px;
+    /* Adiciona um pequeno arredondamento às bordas dos inputs */
+    padding: 10px;
+    /* Adiciona um espaço interno aos inputs */
+    margin-bottom: 15px;
+    /* Adiciona espaço entre os inputs */
+    width: 100%;
+    /* Faz os inputs ocuparem toda a largura disponível */
+    box-sizing: border-box;
+    /* Faz com que o padding não aumente o tamanho total dos inputs */
 }
 
 .content input[type="text"]:focus,
 .content input[type="email"]:focus,
 .content textarea:focus {
-    outline: none; /* Remove a borda de foco nos inputs */
+    outline: none;
+    /* Remove a borda de foco nos inputs */
 }
 
 .content input[type="submit"] {
-    background-color: var(--color-dark5); /* Define a cor de fundo do botão */
-    color: var(--color-white); /* Define a cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    border-radius: 5px; /* Adiciona um pequeno arredondamento às bordas do botão */
-    padding: 10px 20px; /* Adiciona um espaço interno ao botão */
-    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
-    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo do botão */
+    background-color: var(--color-cream);
+    /* Define a cor de fundo do botão */
+    color: var(--color-dark4);
+    /* Define a cor do texto do botão */
+    border: none;
+    /* Remove a borda do botão */
+    border-radius: 5px;
+    /* Adiciona um pequeno arredondamento às bordas do botão */
+    padding: 10px 20px;
+    /* Adiciona um espaço interno ao botão */
+    cursor: pointer;
+    /* Muda o cursor para indicar que o botão é clicável */
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave para a cor de fundo do botão */
 }
 
 .content input[type="submit"]:hover {
-    background-color: var(--color-dark4); /* Altera a cor de fundo do botão quando o mouse passa por cima */
+    background-color: var(--color-cream2);
+    /* Altera a cor de fundo do botão quando o mouse passa por cima */
 }
 
 .checkboxes table {
-    border-collapse: collapse; /* remove o espaçamento entre as células da tabela */
-    width: 100%; /* faz a tabela ocupar toda a largura disponível */
+    border-collapse: collapse;
+    /* remove o espaçamento entre as células da tabela */
+    width: 100%;
+    /* faz a tabela ocupar toda a largura disponível */
 }
 
 .checkboxes td {
-    padding: 5px; /* adiciona um espaçamento interno nas células da tabela */
+    padding: 5px;
+    /* adiciona um espaçamento interno nas células da tabela */
 }
 
 .checkboxes input[type="checkbox"],
 .checkboxes label {
-    margin-right: 10px; /* espaçamento entre os checkboxes e as labels */
+    margin-right: 10px;
+    /* espaçamento entre os checkboxes e as labels */
+}
+
+.remove-button {
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
 }
