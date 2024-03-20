@@ -97,16 +97,18 @@ body {
     align-self: center;
     border: none;
     margin-top: 1rem;
+    text-align: center; /* Adicione esta linha */
 }
 
 .btn-primary {
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #000;
+    color: #000;
 }
 
 .btn-primary:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .btn-second {
