@@ -21,24 +21,24 @@
                 <h2 class="title title-second">Acessar sua Conta</h2>
             
                 <p class="description description-second">Use sua matrícula e senha:</p>
-                <form class="form">
+                <form id="loginForm" class="form" action="dashboard.html" method="post">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="number" placeholder="Matrícula">
+                        <input type="number" id="matricula" placeholder="Matrícula">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" id="senha" placeholder="Senha">
                     </label>
                     
                     
-                    <a href="dashboard.html" class="btn btn-second" style="text-decoration: none;">Entrar</a>
+                    <button type="submit" class="btn btn-second" style="text-decoration: none;">Entrar</button>
                     <!-- Botão Cadastrar -->
                     <a href="cadastrar.html" class="btn btn-primary" style="text-decoration: none; margin-top: 1rem;">Cadastrar</a>
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
-    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

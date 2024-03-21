@@ -21,20 +21,20 @@
                 <h2 class="title title-second">Crie uma Conta</h2>
             
                 <p class="description description-second">Preencha os campos abaixo:</p>
-                <form class="form">
+                <form id="cadastroForm" class="form">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Nome">
+                        <input type="text" id="nome" placeholder="Nome">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="far fa-id-card icon-modify"></i>
-                        <input type="text" placeholder="Matrícula">
+                        <input type="text" id="matricula" placeholder="Matrícula">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" id="senha" placeholder="Senha">
                     </label>
                     
                     <button type="submit" class="btn btn-second">Cadastrar</button>
@@ -45,5 +45,8 @@
         </div><!-- first content -->
         
     <script src="js/app.js"></script>
+    <script src="js/cadastrar.js"></script>
+
+
 </body>
 </html>
