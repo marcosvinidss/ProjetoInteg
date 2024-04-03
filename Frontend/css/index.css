@@ -23,6 +23,12 @@ body {
     width: 45px;
 }
 
+.logo_header {
+    order: -1;
+    /* Esta propriedade reorganiza a ordem dos itens flexíveis */
+}
+
+
 .header,
 .navigation_header {
     display: flex;
@@ -75,59 +81,103 @@ body {
 }
 
 
-    .navigation_header {
-        position: absolute;
-        flex-direction: column !important;
-        top: 0;
-        background: var(--color-dark5);
-        height: 100%;
-        width: 35vw;
-        padding: 1em;
-        animation-duration: 1s;
-        margin-left: -100vw;
-    }
-    
+.navigation_header {
+    position: absolute;
+    flex-direction: column !important;
+    top: 0;
+    background: var(--color-dark5);
+    height: 100%;
+    width: 35vw;
+    padding: 1em;
+    animation-duration: 1s;
+    margin-left: -100vw;
+}
 
-    .courses-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Isso fará com que os cursos tenham no mínimo 250px de largura e se adaptem ao tamanho da tela */
-        gap: 20px; /* Espaçamento entre os cursos */
-        padding: 20px;
-    }
-    
-    .course {
-        background-color: var(--color-dark3); /* Cor de fundo dos cursos */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    }
-    
-    .course img {
-        max-width: 100%; /* Para garantir que a imagem do curso não ultrapasse o contêiner */
-    }
-    
-    .course h2 {
-        margin-top: 10px;
-        font-size: 18px;
-    }
-    
-    .course p {
-        margin-top: 10px;
-        font-size: 14px;
-    }
-    
-    .course a {
-        display: inline-block;
-        margin-top: 10px;
-        text-decoration: none;
-        color: var(--color-cream);
-        background-color: var(--color-dark4);
-        padding: 8px 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-    }
-    
-    .course a:hover {
-        background-color: var(--color-dark5);
-    }
-    
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Isso fará com que os cursos tenham no mínimo 250px de largura e se adaptem ao tamanho da tela */
+    gap: 20px;
+    /* Espaçamento entre os cursos */
+    padding: 20px;
+}
+
+.course {
+    background-color: var(--color-dark3);
+    /* Cor de fundo dos cursos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+.course img {
+    max-width: 100%;
+    /* Para garantir que a imagem do curso não ultrapasse o contêiner */
+}
+
+.course h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.course p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.course a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--color-cream);
+    background-color: var(--color-dark4);
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.course a:hover {
+    background-color: var(--color-dark5);
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25%;
+}
+
+.menu {
+    width: 80%;
+    text-align: right; 
+    margin: 0 auto; 
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 40px; /
+}
+
+
+.logout-button {
+    margin-right: 20px; /* Adiciona um espaço à direita para separá-lo dos outros itens do menu */
+    order: 2; /* Coloca o logout-button no final do menu */
+}
+
+.logout-button a {
+    color: var(--color-cream); /* Cor do texto do botão */
+    text-decoration: none; /* Remove a decoração de texto */
+    padding: 8px 16px; /* Adiciona um espaço interno ao botão */
+    border-radius: 5px; /* Adiciona uma borda arredondada ao botão */
+    background-color: var(--color-dark3); /* Cor de fundo do botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.logout-button a:hover {
+    background-color: var(--color-dark4); /* Altera a cor de fundo ao passar o mouse */
+}

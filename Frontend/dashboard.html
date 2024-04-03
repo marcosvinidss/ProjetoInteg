@@ -9,40 +9,44 @@
 </head>
 <body id="body">
     <div class="header" id="header">
-        <button onclick="toggleSidebar()" class="btn_icon_header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </button>   
         <div class="logo_header">
             <h1>SISGECC</h1>
         </div>
-        <div class="navigation_header" id="navigation_header">
-            <button onclick="toggleSidebar()" class="btn_icon_header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-            </button>
-            <a href="#" class="active">Home</a>
-            <a href="criarCurso.html">Criar novo Curso</a>
+        <div class="menu">
+            <a href="dashboard.html">Home</a>
+            <a href="criarCurso.html">Criar Novo curso</a>
             <a href="calchoras.html">Calculadora de Horas</a>
             <a href="contato.html">Contato</a>
+        </div>
+        <div class="logout-button">
+            <a href="logout.php">Sair</a>
         </div>
     </div>
     <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
         <h1>Painel de Cursos</h1>
         <div id="app">
             <div class="courses-grid">
-             
-                <div class="course">
-                    <h2>Nome do Curso</h2>
-                    <p>Descrição do curso...</p>
-                    <a href="#">Ver mais</a>
-                </div>
+                <?php
+                // Exemplo de dados fictícios, você pode substituir isso com dados do seu banco de dados
+                $cursos = array(
+                    array("Nome do Curso 1", "Descrição do curso 1..."),
+                    array("Nome do Curso 2", "Descrição do curso 2..."),
+                    // Adicione mais cursos conforme necessário
+                );
+
+                // Loop para gerar os blocos de cartão
+                foreach ($cursos as $curso) {
+                ?>
+                    <div class="course">
+                        <h2><?php echo $curso[0]; ?></h2>
+                        <p><?php echo $curso[1]; ?></p>
+                        <a href="#">Ver mais</a>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
-            
-          </div>
-        
+        </div>
     </div>
     <script src="js/dashboard.js"></script>
     <script src="js/scripts.js"></script>

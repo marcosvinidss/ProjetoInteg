@@ -75,16 +75,62 @@ body {
 }
 
 
-    .navigation_header {
-        position: absolute;
-        flex-direction: column !important;
-        top: 0;
-        background: var(--color-dark5);
-        height: 100%;
-        width: 35vw;
-        padding: 1em;
-        animation-duration: 1s;
-        margin-left: -100vw;
-    }
-    
+.navigation_header {
+    position: absolute;
+    flex-direction: column !important;
+    top: 0;
+    background: var(--color-dark5);
+    height: 100%;
+    width: 35vw;
+    padding: 1em;
+    animation-duration: 1s;
+    margin-left: -100vw;
+}
 
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25%;
+}
+
+.menu {
+    width: 80%;
+    text-align: right;
+    margin: 0 auto;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 40px;/
+}
+
+.logout-button {
+    margin-right: 20px;
+    /* Adiciona um espaço à direita para separá-lo dos outros itens do menu */
+    order: 2;
+    /* Coloca o logout-button no final do menu */
+}
+
+.logout-button a {
+    color: var(--color-cream);
+    /* Cor do texto do botão */
+    text-decoration: none;
+    /* Remove a decoração de texto */
+    padding: 8px 16px;
+    /* Adiciona um espaço interno ao botão */
+    border-radius: 5px;
+    /* Adiciona uma borda arredondada ao botão */
+    background-color: var(--color-dark3);
+    /* Cor de fundo do botão */
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.logout-button a:hover {
+    background-color: var(--color-dark4);
+    /* Altera a cor de fundo ao passar o mouse */
+}
