@@ -4,7 +4,7 @@ document.getElementById('materiaInput').addEventListener('keypress', function (e
         var materia = this.value.trim();
         if (materia !== '') {
             addMateria(materia);
-            this.value = '';
+            this.value = ''; // Limpa o input após adicionar a matéria
         }
     }
 });
@@ -27,4 +27,11 @@ function addMateria(materia) {
     materiaElement.appendChild(document.createTextNode(' '));
     materiaElement.appendChild(removeButton);
     document.getElementById('materiasSelecionadas').appendChild(materiaElement);
+
+    // Adiciona a matéria ao input com o nome "materias"
+    var materiasInput = document.createElement('input');
+    materiasInput.type = 'hidden';
+    materiasInput.name = 'materias[]';
+    materiasInput.value = materia;
+    document.getElementById('content').appendChild(materiasInput);
 }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISGECC</title>
+    <link rel="stylesheet" href="css/calchoras.css">
+</head>
+
+<body id="body">
+    <div class="header" id="header">
+        <div class="logo_header">
+            <h1>SISGECC</h1>
+        </div>
+        <div class="menu">
+            <a href="dashboard.php">Home</a>
+            <a href="criarCurso.php">Criar Novo curso</a>
+            <a href="calchoras.php">Calculadora de Horas</a>
+            <a href="contato.php">Contato</a>
+        </div>
+        
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <h1>Calculadora de Horas</h1>
+        
+       
+        <div class="add-server-btn">
+            <button onclick="openPopup()">Adicionar Novo Servidor</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Pesquisar...">
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nome do Servidor</th>
+                        <th>Matéria</th>
+                        <th>Curso</th>
+                        <th>Horas Trabalhadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>João Silva</td>
+                        <td>Tiro</td>
+                        <td>Física I</td> <!-- Adicionando o nome do curso -->
+                        <td class="hours">40</td> <!-- Adicionando a classe 'hours' para esta célula -->
+                    </tr>
+                    <tr>
+                        <td>12345</td>
+                        <td>João Silva</td>
+                        <td>Escolta</td>
+                        <td>Física I</td> <!-- Adicionando o nome do curso -->
+                        <td class="hours">40</td> <!-- Adicionando a classe 'hours' para esta célula -->
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>Maria Souza</td>
+                        <td>Tiro</td>
+                        <td>Química II</td> <!-- Adicionando o nome do curso -->
+                        <td class="hours">35</td> <!-- Adicionando a classe 'hours' para esta célula -->
+                    </tr>
+                    <tr>
+                        <td>54321</td>
+                        <td>Carlos Oliveira</td>
+                        <td>Tiro</td>
+                        <td>Matemática III</td> <!-- Adicionando o nome do curso -->
+                        <td class="hours">42</td> <!-- Adicionando a classe 'hours' para esta célula -->
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- Adicione um elemento div para representar o pop-up -->
+        <div id="popup" class="popup">
+            <!-- Conteúdo do pop-up -->
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span> <!-- Botão para fechar o pop-up -->
+                <h2>Adicionar Novo Servidor</h2>
+                <!-- Formulário para adicionar um novo servidor -->
+                <form id="server-form">
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula">
+                    <label for="nome">Nome do Servidor:</label>
+                    <input type="text" id="nome" name="nome">
+                    <label for="materia">Matéria:</label>
+                    <input type="text" id="materia" name="materia">
+                    <label for="curso">Curso:</label> <!-- Novo campo para o curso -->
+                    <input type="text" id="curso" name="curso">
+                    <label for="horas_trabalhadas">Horas Trabalhadas:</label>
+                    <input type="number" id="horas_trabalhadas" name="horas_trabalhadas" min="0">
+                    <input type="submit" value="Adicionar">
+                </form>
+            </div>
+        </div>
+        <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Editar Servidor</h2>
+            <form>
+                <label for="matricula">Matrícula:</label><br>
+                <input type="text" id="matricula" name="matricula" readonly><br>
+                <label for="nome">Nome do Servidor:</label><br>
+                <input type="text" id="nome" name="nome"><br>
+                <label for="materia">Matéria:</label><br>
+                <input type="text" id="materia" name="materia"><br>
+                <label for="curso">Curso:</label><br>
+                <input type="text" id="curso" name="curso"><br>
+                <label for="horas">Horas Trabalhadas:</label><br>
+                <input type="text" id="horas" name="horas"><br><br>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+
+    </div>
+    <script src="js/calchoras.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

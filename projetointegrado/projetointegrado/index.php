@@ -21,21 +21,23 @@
                 <h2 class="title title-second">Acessar sua Conta</h2>
             
                 <p class="description description-second">Use sua matrícula e senha:</p>
-                <form id="loginForm" class="form" action="dashboard.html" method="post">
+
+
+                <form id="loginForm" class="form" action="testLogin.php" method="POST">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="number" id="matricula" placeholder="Matrícula">
+                        <input type="number" id="matricula" name="matricula" placeholder="Matrícula">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" id="senha" placeholder="Senha">
+                        <input type="password" id="senha" name="senha" placeholder="Senha">
                     </label>
                     
                     
-                    <button type="submit" class="btn btn-second" style="text-decoration: none;">Entrar</button>
+                    <button type="submit" class="btn btn-second" name="submit" style="text-decoration: none;">Entrar</button>
                     <!-- Botão Cadastrar -->
-                    <a href="cadastrar.html" class="btn btn-primary" style="text-decoration: none; margin-top: 1rem;">Cadastrar</a>
+                    <a href="cadastrar.php" class="btn btn-primary" style="text-decoration: none; margin-top: 1rem;">Cadastrar</a>
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
